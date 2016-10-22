@@ -4,8 +4,7 @@ import './style.css';
 import FontAwesome from 'react-fontawesome';
 
 export default class TopBar extends Component {
-
-  render() {
+  render () {
     return (
       <footer>
         <div className='made-by'>
