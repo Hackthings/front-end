@@ -16,7 +16,7 @@ export default class TopBar extends Component {
             <li>Adam Bowles</li>
           </ul>
         </div>
-        <p className='copyright'><FontAwesome name='copyright' /> 4 idiots</p>
+        <p className='copyright'><FontAwesome name='copyright' /> Those 4 idiots</p>
       </footer>
     );
   }
