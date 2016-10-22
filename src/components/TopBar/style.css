@@ -1,10 +1,26 @@
-.logo {
-  height: 80px;
+/*.logo {
+}*/
+* {
+  --header-height: 80px;
 }
 
 .header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  box-sizing: border-box;
+  background-color: var(--aqua-dark);
+  height: var(--header-height);
+  padding: 10px;
   color: white;
+}
+
+.logo {
+  height: 100%;
+}
+
+.title {
+  margin: 0;
+  padding: 0;
 }
