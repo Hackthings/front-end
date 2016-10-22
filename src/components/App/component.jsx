@@ -14,20 +14,15 @@ class App extends Component {
 
     if ('geolocation' in navigator) {
       navigator.geolocation.getCurrentPosition(position => {
-        this.setLatitude(position.coords.latitude);
-        this.setLongitude(position.coords.longitude);
+        this.setLocation(position.coords.latitude, position.coords.longitude);
       }, this.geoFailed);
     } else {
       this.geoFailed('This site needs a browser with geolocation support');
     }
   }
 
-  setLatitude = (latitude) => {
-    this.props.setLatitude(latitude);
-  }
-
-  setLongitude = (longitude) => {
-    this.props.setLongitude(longitude);
+  setLocation = (latitude = 0, longitude = 0) => {
+    this.props.setLocation(latitude, longitude);
   }
 
   geoFailed = (error) => {
@@ -46,8 +41,7 @@ class App extends Component {
 }
 
 App.propTypes = {
-  setLatitude: PropTypes.func,
-  setLongitude: PropTypes.func
+  setLocation: PropTypes.func
 };
 
 export default App;
