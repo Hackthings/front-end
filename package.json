@@ -6,6 +6,8 @@
     "react-scripts": "0.6.1"
   },
   "dependencies": {
+    "algoliasearch": "^3.18.1",
+    "algoliasearch-helper": "^2.14.0",
     "babel-eslint": "^7.0.0",
     "eslint-config-react": "^1.1.1",
     "eslint-config-semistandard": "^7.0.0",

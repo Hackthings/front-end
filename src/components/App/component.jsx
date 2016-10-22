@@ -5,25 +5,40 @@ import 'font-awesome/css/font-awesome.css';
 import strings from '../../helpers/strings';
 
 import TopBar from '../TopBar';
+import Search from '../Search';
 import Footer from '../Footer';
 
 class App extends Component {
   componentDidMount () {
     document.title = strings.appName;
 
-    // Find user's location and dispatch
+    if ('geolocation' in navigator) {
+      navigator.geolocation.getCurrentPosition(position => {
+        this.setLatitude(position.coords.latitude);
+        this.setLongitude(position.coords.longitude);
+      }, this.geoFailed);
+    } else {
+      this.geoFailed('This site needs a browser with geolocation support');
+    }
+  }
 
-    // this.props.setLatitude(1);
-    // this.props.setLongitude(1);
+  setLatitude = (latitude) => {
+    this.props.setLatitude(latitude);
+  }
+
+  setLongitude = (longitude) => {
+    this.props.setLongitude(longitude);
+  }
+
+  geoFailed = (error) => {
+    window.alert(error);
   }
 
   render () {
     return (
       <div className='App'>
         <TopBar />
-        <p className='App-intro'>
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <Search />
         <Footer />
       </div>
     );
