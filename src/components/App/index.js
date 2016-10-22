@@ -1,2 +1,2 @@
-import App from './component.jsx';
+import App from './container.js';
 export default App;

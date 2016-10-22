@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import './style.css';
 import 'font-awesome/css/font-awesome.css';
 
@@ -10,6 +10,7 @@ import Footer from '../Footer';
 class App extends Component {
   componentDidMount () {
     document.title = strings.appName;
+    this.props.test();
   }
 
   render() {
@@ -23,6 +24,10 @@ class App extends Component {
       </div>
     );
   }
+}
+
+App.PropTypes = {
+  test: PropTypes.func
 }
 
 export default App;
