@@ -1,5 +1,23 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: 'Open Sans', sans-serif;
+
+  /* Colours */
+  --blue-jeans-light: #5D9CEC;
+  --blue-jeans-dark: #4A89DC;
+
+  --aqua-light: #4FC1E9;
+  --aqua-dark: #3BAFDA;
+
+  --light-grey-light: #F5F7FA;
+  --light-grey-dark: #E6E9ED;
+
+  --medium-grey-light: #CCD1D9;
+  --medium-grey-dark: #AAB2BD;
+
+  --dark-grey-light: #656D78;
+  --dark-grey-dark: #434A54;
 }
