@@ -1,16 +1,16 @@
 import React from 'react';
-import { render } from 'react-dom'
-import { createStore, applyMiddleware } from 'redux'
-import { Provider } from 'react-redux'
-import thunk from 'redux-thunk'
-import createLogger from 'redux-logger'
+import { render } from 'react-dom';
+import { createStore, applyMiddleware } from 'redux';
+import { Provider } from 'react-redux';
+import thunk from 'redux-thunk';
+import createLogger from 'redux-logger';
 
 import App from './components/App';
 import './index.css';
 
-import rootReducer from './store/reducers'
+import rootReducer from './store/reducers';
 
-const middleware = [ thunk ]
+const middleware = [ thunk ];
 if (process.env.NODE_ENV !== 'production') {
   middleware.push(createLogger());
 }
@@ -18,7 +18,7 @@ if (process.env.NODE_ENV !== 'production') {
 const store = createStore(
   rootReducer,
   applyMiddleware(...middleware)
-)
+);
 
 render(
   <Provider store={store}>

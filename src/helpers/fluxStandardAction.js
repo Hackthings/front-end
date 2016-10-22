@@ -10,22 +10,22 @@ const FLUX_STANDARD_ACTION = {
 };
 
 export const successAction = (type, payload = {}) => {
-  let action = FLUX_STANDARD_ACTION
+  let action = FLUX_STANDARD_ACTION;
 
-  action.type = type
-  action.payload = payload
-  action.error = false
+  action.type = type;
+  action.payload = payload;
+  action.error = false;
 
-  return action
+  return action;
 };
 
 export const errorAction = (type, message = 'Error', payload = {}) => {
-  let action = FLUX_STANDARD_ACTION
+  let action = FLUX_STANDARD_ACTION;
 
-  action.type = type
-  action.payload.error = new Error(message)
-  action.payload.data = payload
-  action.error = true
+  action.type = type;
+  action.payload.error = new Error(message);
+  action.payload.data = payload;
+  action.error = true;
 
-  return action
+  return action;
 };

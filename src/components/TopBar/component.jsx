@@ -6,7 +6,7 @@ import strings from '../../helpers/strings';
 
 export default class TopBar extends Component {
 
-  render() {
+  render () {
     return (
       <div className='header'>
         <img src={logo} className='logo' alt={strings.appName} />
