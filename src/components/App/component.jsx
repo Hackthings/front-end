@@ -13,7 +13,7 @@ class App extends Component {
     this.props.test();
   }
 
-  render() {
+  render () {
     return (
       <div className='App'>
         <TopBar />
@@ -28,6 +28,6 @@ class App extends Component {
 
 App.PropTypes = {
   test: PropTypes.func
-}
+};
 
 export default App;
