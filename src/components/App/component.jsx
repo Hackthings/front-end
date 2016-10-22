@@ -10,7 +10,11 @@ import Footer from '../Footer';
 class App extends Component {
   componentDidMount () {
     document.title = strings.appName;
-    this.props.test();
+
+    // Find user's location and dispatch
+
+    // this.props.setLatitude(1);
+    // this.props.setLongitude(1);
   }
 
   render () {
@@ -26,8 +30,9 @@ class App extends Component {
   }
 }
 
-App.PropTypes = {
-  test: PropTypes.func
+App.propTypes = {
+  setLatitude: PropTypes.func,
+  setLongitude: PropTypes.func
 };
 
 export default App;
