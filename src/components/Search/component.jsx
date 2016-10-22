@@ -10,19 +10,19 @@ class Search extends Component {
 
   componentWillReceiveProps (nextProps) {
     if (nextProps.latitude !== this.props.latitude || nextProps.longitude !== this.props.longitude) {
-      this.getSearch();
+      this.getSearch(nextProps.latitude, nextProps.longitude);
     }
   }
 
-  getSearch = () => {
-    const helper = search(this.props.latitude, this.props.longitude);
+  getSearch = (latitude, longitude) => {
+    const helper = search(latitude, longitude);
 
     helper.on('result', content => {
       this.setState({ results: content.hits });
     });
 
     helper.setQueryParameter('aroundRadius', 3 * 1000);
-    helper.setQueryParameter('aroundLatLng', '52.47692018502711, -1.8878567218780518');
+    helper.setQueryParameter('aroundLatLng', `${latitude}, ${longitude}`);
     helper.setQueryParameter('getRankingInfo', true);
 
     this.setState({ results: [] });
@@ -41,7 +41,7 @@ class Search extends Component {
             return (
               <div key={index}>
                 <span>{result.description} ({result._rankingInfo.geoDistance}m away)</span>
-                <img src={result.photoURL} width='100' height='100' />
+                <img src={result.photoURL} alt='Facility' width='100' height='100' />
               </div>
             );
           })}
