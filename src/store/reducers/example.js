@@ -1,7 +1,6 @@
 let initialState = '';
 
 const exampleReducer = (state = initialState, payload = '') => {
-  console.log('exampleReducer');
   return payload;
 }
 
