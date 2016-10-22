@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import './style.css';
+import 'font-awesome/css/font-awesome.css';
 
 import strings from '../../helpers/strings';
 
 import TopBar from '../TopBar';
+import Footer from '../Footer';
 
 class App extends Component {
   componentDidMount () {
@@ -17,7 +19,7 @@ class App extends Component {
         <p className='App-intro'>
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
-        <h2>asd</h2>
+        <Footer />
       </div>
     );
   }

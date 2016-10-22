@@ -1,0 +1,18 @@
+/** {
+  --footer-height: 80px;
+}*/
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  box-sizing: border-box;
+  background-color: var(--dark-grey-dark);
+  padding: 10px;
+  color: white;
+}
+
+footer .logo {
+  height: 10px;
+}
