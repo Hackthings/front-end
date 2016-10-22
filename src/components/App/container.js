@@ -1,8 +1,8 @@
 import { connect } from 'react-redux';
 import App from './component.jsx';
 
-import { example } from '../../store/actions';
-const { exampleAction } = example;
+import { location } from '../../store/actions';
+const { setLocation } = location;
 
 const mapStateToProps = (state) => {
   return {};
@@ -10,8 +10,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    test: () => {
-      dispatch(exampleAction('asdasda'));
+    setLocation: (latitude = 0, longitude = 0) => {
+      dispatch(setLocation(latitude, longitude));
     }
   };
 };

@@ -1,2 +1,2 @@
-import * as example from './example';
-export { example };
+import * as location from './location';
+export { location };
