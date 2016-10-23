@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Bree+Serif');
 
 body {
   margin: 0;
@@ -9,8 +9,8 @@ body {
   --blue-jeans-light: #5D9CEC;
   --blue-jeans-dark: #4A89DC;
 
-  --aqua-light: #4FC1E9;
-  --aqua-dark: #3BAFDA;
+  --aqua-light: #48CFAD;
+  --aqua-dark: #37BC9B;
 
   --light-grey-light: #F5F7FA;
   --light-grey-dark: #E6E9ED;

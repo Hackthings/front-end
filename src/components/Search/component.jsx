@@ -3,7 +3,9 @@ import './style.css';
 
 import { search } from '../../helpers/algolia';
 
+import BathroomList from '../BathroomList';
 import Map from '../Map';
+
 
 class Search extends Component {
   state = {
@@ -38,16 +40,10 @@ class Search extends Component {
       <div className='Search'>
         <p>latitude: {this.props.latitude}</p>
         <p>longitude: {this.props.longitude}</p>
-        <div>
-          {results.map((result, index) => {
-            return (
-              <div key={index}>
-                <span>{result.description} ({result._rankingInfo.geoDistance}m away)</span>
-                <img src={result.photoURL} alt='Facility' width='100' height='100' />
-              </div>
-            );
-          })}
-        </div>
+
+        <BathroomList
+          items={results}
+        />
         <Map
           results={this.state.results}
         />
