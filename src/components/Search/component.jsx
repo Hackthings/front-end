@@ -3,6 +3,8 @@ import './style.css';
 
 import { search } from '../../helpers/algolia';
 
+import Map from '../Map';
+
 class Search extends Component {
   state = {
     results: []
@@ -46,6 +48,9 @@ class Search extends Component {
             );
           })}
         </div>
+        <Map
+          results={this.state.results}
+        />
       </div>
     );
   }
