@@ -35,14 +35,24 @@ class Search extends Component {
 
   render () {
     const { results } = this.state;
-    return (
-      <div className='search'>
-        {/* <p>latitude: {this.props.latitude}</p>
-        <p>longitude: {this.props.longitude}</p> */}
 
+    let list = (
+      <div className='loading'>
+        Locating&hellip;
+      </div>
+    );
+
+    if (this.props.latitude && this.props.longitude) {
+      list = (
         <div className='results'>
           <BathroomList items={results} />
         </div>
+      );
+    }
+
+    return (
+      <div className='search'>
+        {list}
         <div className='map'>
           <Map results={this.state.results} />
         </div>
