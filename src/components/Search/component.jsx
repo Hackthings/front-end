@@ -42,10 +42,19 @@ class Search extends Component {
       </div>
     );
 
+    let map;
+
     if (this.props.latitude && this.props.longitude) {
       list = (
         <div className='results'>
           <BathroomList items={results} />
+        </div>
+      );
+
+      map = (
+
+        <div className='map'>
+          <Map results={this.state.results} />
         </div>
       );
     }
@@ -53,9 +62,7 @@ class Search extends Component {
     return (
       <div className='search'>
         {list}
-        <div className='map'>
-          <Map results={this.state.results} />
-        </div>
+        {map}
       </div>
     );
   }
