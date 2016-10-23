@@ -4,6 +4,8 @@ import './style.css';
 import { search } from '../../helpers/algolia';
 
 import BathroomList from '../BathroomList';
+import Map from '../Map';
+
 
 class Search extends Component {
   state = {
@@ -38,8 +40,12 @@ class Search extends Component {
       <div className='Search'>
         <p>latitude: {this.props.latitude}</p>
         <p>longitude: {this.props.longitude}</p>
+
         <BathroomList
           items={results}
+        />
+        <Map
+          results={this.state.results}
         />
       </div>
     );
