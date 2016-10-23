@@ -9,6 +9,10 @@ class BathroomItem extends Component {
   }
 
   _onReserve = () => {
+    if (!localStorage.getItem('callsEnabled')) {
+      return;
+    }
+
     if (!this.state.reserving) {
       this.setState({
         reserving: true
