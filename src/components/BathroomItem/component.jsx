@@ -24,7 +24,7 @@ class BathroomItem extends Component {
       url += '?number=443301200292';
       url += '&toName=Dan';
       url += '&fromName=Josh';
-      url += '&time=3';
+      url += '&time=4';
 
       var oReq = new XMLHttpRequest();
       oReq.open('GET', url);
