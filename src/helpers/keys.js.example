@@ -1,7 +1,0 @@
-export default {
-  algolia: {
-    index: 'locations',
-    applicationID: 'applicationID',
-    apiKey: 'apiKey'
-  }
-};
