@@ -1,0 +1,16 @@
+.search {
+  display: flex;
+  flex-direction: row;
+}
+
+.results {
+  width: calc(200% / 3);
+}
+
+.map {
+  width: calc(100% / 3);
+  position: fixed;
+  left: calc(200% / 3);
+  width: 0;
+  right: 0;
+}

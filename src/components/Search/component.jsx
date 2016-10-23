@@ -6,7 +6,6 @@ import { search } from '../../helpers/algolia';
 import BathroomList from '../BathroomList';
 import Map from '../Map';
 
-
 class Search extends Component {
   state = {
     results: []
@@ -37,16 +36,16 @@ class Search extends Component {
   render () {
     const { results } = this.state;
     return (
-      <div className='Search'>
-        <p>latitude: {this.props.latitude}</p>
-        <p>longitude: {this.props.longitude}</p>
+      <div className='search'>
+        {/* <p>latitude: {this.props.latitude}</p>
+        <p>longitude: {this.props.longitude}</p> */}
 
-        <BathroomList
-          items={results}
-        />
-        <Map
-          results={this.state.results}
-        />
+        <div className='results'>
+          <BathroomList items={results} />
+        </div>
+        <div className='map'>
+          <Map results={this.state.results} />
+        </div>
       </div>
     );
   }

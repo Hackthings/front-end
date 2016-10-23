@@ -32,6 +32,7 @@ class Map extends Component {
   render () {
     return (
       <GoogleMap
+        className='map'
         google={this.props.google}
         center={{ lat: this.state.latitude, lng: this.state.longitude }}
         zoom={15}
